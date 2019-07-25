@@ -1,8 +1,8 @@
 class Operations {
-    constructor (a, b) {
-      this.a = a;
-      this.b = b;
-      this.c = 0
+    constructor (numero1, numero2) {
+      this.numero1 = numero1;
+      this.numero2 = numero2;
+      this.resultado = 0
     }
   
     get sum() {
@@ -10,10 +10,10 @@ class Operations {
     }
   
     calcSum() {    
-      this.c = this.a + this.b;
+      this.resultado = this.numero1 + this.numero2;
       return {
-        value: this.c,
-        text: `La suma de ${this.a} + ${this.b} = ${this.c}`
+        value: this.resultado,
+        text: `La suma de ${this.numero1} + ${this.numero2} = ${this.resultado}`
       }
     }
   
@@ -22,10 +22,10 @@ class Operations {
     }
   
     calcSubtraction() {
-      this.c = this.a - this.b;
+      this.resultado = this.numero1 - this.numero2;
       return {
-        value: this.c,
-        text: `La resta de ${this.a} - ${this.b} = ${this.c}`
+        value: this.resultado,
+        text: `La resta de ${this.numero1} - ${this.numero2} = ${this.resultado}`
       }
     }
   
@@ -34,10 +34,10 @@ class Operations {
     }
   
     calcArea() {
-      this.c = (this.a * this.b) / 2;
+      this.resultado = (this.numero1 * this.numero2) / 2;
       return {
-        value: this.c,
-        text: `El área del triángulo es ${this.c}`
+        value: this.resultado,
+        text: `El área del triángulo es ${this.resultado}`
       }
     }
   }

@@ -4,49 +4,49 @@ const should = require('chai').should();
 
 const Operations = require('../index');
 
-describe('Mathematical operations', () => {
-    const operation = new Operations(10, 5);
+describe('Operaciones matemáticas', () => {
+    const operation = new Operations(10, 10);
   
-    describe('Basic operation: sum with assert', () => {
-        it('Sum of 2 numbers equals 15', () => {
+    describe('Operaciones básicas, sumas con assert', () => {
+        it('La suma de dos numeros debería ser 15', () => {
             const sum = operation.sum.value;
             assert.equal(sum, 15);
         })
     
-        it('The sum of 10 + 5 equals 15 ', () => {
+        it('La suma de 10 y 5 es 15', () => {
             const sum = operation.sum.text;
             assert.equal(sum, 'La suma de 10 + 5 = 15');
         })
     
-        it('The result is a string', () => {
+        it('La suma es un string', () => {
             const sum = operation.sum.text;
             assert.typeOf(sum, 'string');
         })
     
-        it('The result is a number', () => {
+        it('La suma es un numero', () => {
             const sum = operation.sum.value;
             assert.typeOf(sum, 'number');
         })
   
     })
   
-    describe('Basic operation: subtraction with expect', () => {
-      it('Subtraction of 2 numbers equals 5', () => {
+    describe('Operaciones básicas, resta con expect', () => {
+      it('la resta de dos numeros es 5', () => {
         const res = operation.subtraction.value;
         expect(res).to.equal(5);
       })
   
-      it('The subtraction of 10 - 5 equals 5 ', () => {
+      it('la resta de 10 - 5 es igual a 5', () => {
         const res = operation.subtraction.text;
         expect(res).to.equal('La resta de 10 - 5 = 5');
       })
   
-      it('The result is a string', () => {
+      it('El resultado es un string', () => {
         const res = operation.subtraction.text;
         expect(res).to.be.a('string');
       })
   
-      it('The result is a number', () => {
+      it('El resultado es un numero', () => {
         const res = operation.subtraction.value;
         expect(res).to.be.a('number');
       })
